@@ -1,0 +1,672 @@
+/* Variables globales */
+:root {
+    --primary-color: white;
+    --secondary-color: #44C1B6;
+    --menu-bg: #0C4D4D;
+    --menu-hover: #489494;
+}
+
+/* Styles de base */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles de texte */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 10vw;
+    font-family: 'Stencil Std';
+}
+
+h2 {
+    font-size: 5vw;
+    font-family: 'Stencil Std';
+}
+
+h3 { /* Eren */
+    font-size: 2vw;
+    font-family: 'Arial', italic;
+}
+
+h4 { /* le narrateur */
+    font-size: 2vw;
+    font-family: 'Arial', italic;
+    color: var(--secondary-color);
+}
+
+.center {text-align:center;
+
+}
+.italique {font-style: italic;}
+
+.i1{
+position: fixed;
+top: 0vw;
+border-radius: 100vw;
+max-height: 20vw;
+   }
+.i2 {
+border-radius: 100px;
+max-height: 15vw;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+
+.help {position: fixed;
+max-width:20%;
+ height:auto;
+ right:85%;
+ top: 65%; 
+ transform: scaleX(-1);
+}
+
+h5 { /* Description */
+	font-size:2vw;
+  font-family:New Century Schoolbook;
+  text-align:center;
+  color:white;
+}
+h6 { /* Annotation */ 
+	font-size:1vw;
+  font-family:New Century Schoolbook;
+  text-align:center;
+  color:white;
+}
+
+p{
+  font-size:2vw;
+  font-family:'arial',monospace;
+  text-align:center;
+  color:white;
+  } 
+ul{
+
+  font-family:arial;
+  color:white
+  } 
+  
+  .Iconejeux {border-radius : 35% ;
+    max-width:40%;height:auto;
+  }
+.Centrer {
+   display: block; margin-left: auto; margin-right: auto
+}
+
+.droite {right: 30px}
+
+
+.menu {font-size:2vw}
+
+/* ici c'est l'animation des boutons */
+
+
+.BoutonV { 
+  background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+  background-color:#2e466e;
+  border-radius:100vw;
+  border:1px solid #1f2f47;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Georgia;
+  font-size:2.4vw;
+  font-weight:bold;
+  font-style:italic;
+  padding:1vw 3vw;
+  text-decoration:none;
+}
+.BoutonV:hover {
+  background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+  background-color:#415989;
+  animation: bouton 0.5s infinite alternate; 
+}
+.BoutonV:active {
+  position:relative;
+  top:2px;
+}
+
+.BoutonN {
+
+  background:linear-gradient(to bottom, #0B4E52 5%, #0B4E52 100%);
+  border-radius:100vw;
+  border:0px solid #000;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Georgia;
+  font-size:2.2vw;
+  font-weight:bold;
+  font-style:italic;
+  padding:1vw 3vw;
+  text-decoration:none;
+}
+.BoutonN:hover {
+  background:linear-gradient(to bottom, #9B1717 5%, #000 100%);
+  background-color:#ffffff;
+  animation: bouton 0.5s infinite alternate; 
+}
+.BoutonN:active {
+  position:relative;
+  top:2px;
+}
+
+@keyframes bouton {
+	from {
+		transform :scale(1);
+	}
+	to {
+		transform :scale(1.1);
+	}
+}
+
+/* ici c'est le loader */
+
+.loader {                      
+	position: absolute;
+	width: 95%;
+	height: 95%;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.lettre {
+	color: #484848;
+	font-family: helvetica; 
+	font-size : 5vw;
+	letter-spacing: 1.5vw;
+	margin-bottom: 5vw;
+	animation: flash 1.2s linear infinite;
+}
+
+@keyframes flash  {
+
+	0% {
+		color: #fff900;
+		text-shadow: 0 0 7px #fff900;
+	}
+	90% {
+		color: #484848;
+		text-shadow: none;
+	}
+	100% {
+		color: #fff900;
+		text-shadow: 0 0 7px #fff900;
+	}
+}
+.lettre:nth-child(1) {
+	animation-delay: 0.1s;
+}
+.lettre:nth-child(2) {
+	animation-delay: 0.2s;
+}
+.lettre:nth-child(3) {
+	animation-delay: 0.3s;
+}
+.lettre:nth-child(4) {
+	animation-delay: 0.4s;
+}
+.lettre:nth-child(5) {
+	animation-delay: 0.5s;
+}
+.lettre:nth-child(6) {
+	animation-delay: 0.6s;
+}
+.lettre:nth-child(7) {
+	animation-delay: 0.7s;
+}
+.lettre:nth-child(8) {
+	animation-delay: 0.8s;
+}
+.lettre:nth-child(9) {
+	animation-delay: 0.95s;
+}
+.lettre:nth-child(10) {
+	animation-delay: 1.05s;
+}
+
+.fondu-out {
+	opacity: 0;
+	transition: opacity 0.4 ease-out;
+	z-index: -1;
+}
+
+/* ici c'est pour les paragraphes qui apparaissent chacun son tour */
+
+.ap1 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 0s;
+}
+.ap11 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 1s;
+}
+.ap2 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 2s;
+}
+.ap3 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 3s;
+}
+.ap4 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 4s;
+}
+.ap5 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 5s;
+}
+.ap6 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 6s;
+}
+.ap7 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 7s;
+}
+.ap8 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 8s;
+}
+.ap9 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 9s;
+}
+.ap10 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 10s;
+}
+.ap12 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 11s;
+}
+.ap13 {
+	opacity: 0;
+	transform: translationY(-30px);
+	animation: apparition 2s linear forwards 12s;
+}
+
+@keyframes apparition {
+ 	0% {
+ 		opacity: 0;
+ 		transform : translationY(-30vw);
+ 	}
+ 	100% {
+ 		opacity: 1;
+ 		transform : translationY(0px);
+ 	}
+}
+
+
+/* ici c'est pour le menu déroulant */
+
+#menu-demo2, #menu-demo2 ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align:center;
+    position: relative;
+    z-index: 9999;
+}
+
+#menu-demo2 {
+    position: fixed;
+    left: 80%;
+    top: 5%;
+    z-index: 9999;
+}
+
+#menu-demo2 li{
+    display:inline-block;
+    position:relative;
+    border-radius:200px 200px 0 0;
+    z-index: 9999;
+}
+
+#menu-demo2 ul{
+    position:absolute;
+    z-index: 9999;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    -moz-transition: .8s all .3s;
+    -webkit-transition: .8s all .3s;
+    transition: .8s all .3s;
+}
+
+/* Ajout pour les éléments du sous-menu */
+#menu-demo2 ul li {
+    z-index: 9999;
+}
+
+#menu-demo2 li:hover ul{
+max-height:15vw; 
+}
+/* background des liens menus */
+#menu-demo2 li:first-child{
+background-color: #0C4D4D;
+
+}
+#menu-demo2 li:last-child{
+background-color: #0C4D4D ;
+}
+/* background des liens sous menus */
+#menu-demo2 li:first-child li{
+background:#2A2333;
+}
+#menu-demo2 li:last-child li{
+background:#0A5F5F;
+font-size:1vw;
+text-align:center;
+}
+/* background des liens menus et sous menus au survol */
+#menu-demo2 li:first-child:hover, #menu-demo2 li:first-child li:hover{
+background:#489494;
+}
+
+/* les a href */
+#menu-demo2 a{
+text-decoration:none;
+display:block;
+padding:1vw 1vw;
+color:#fff;
+font-family:arial;
+}
+
+
+
+
+
+/* Souris */
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 1px dashed white;
+    border-radius: 50%;
+    position: absolute;
+    animation: Anim1 2s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 5px;
+    height: 5px;
+    background: crimson;
+    border-radius: 50%;
+}
+
+.expand {
+    animation: Anim2 .5s;
+    background: crimson;
+    border: 1px solid crimson;
+}
+@keyframes Anim1 {
+    0% {
+        transform: scale(0.2) rotate(0deg);
+    }
+    50% {
+        transform: scale(1) rotate(190deg);
+    }
+    75%  {
+    	transform: scale(0.5) rotate(90deg);
+    }
+    100% {
+    	transform: scale(1) rotate(190deg);
+    }
+    }
+
+@keyframes Anim2 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+        opacity:0;
+    }
+}
+@media screen and (max-width: 1100px) {
+  .help {position: fixed;
+        max-width:20%;
+        height:auto;
+        right:85%;
+        top: 75%; 
+        transform: scaleX(-1);
+}
+}
+
+
+@media screen and (max-width: 800px) and (orientation: portrait) { 
+
+.help {position: fixed;
+max-width:20%;
+ height:auto;
+ right:85%;
+ top: 90%; 
+ transform: scaleX(-1);
+}
+ h1{
+  font-size:10vw;
+  font-family:Stencil Std,;
+  text-align:center;
+  color:white;
+  } 
+h2 {
+  font-size: 5vw;
+  font-family:Stencil Std,;
+  text-align:center;
+  color:white;
+}
+h3 {  /* Eren*/ 
+  font-size:5vw;
+  font-family:'arial',italic;
+  text-align:center;
+  color:white;
+}
+h4 { /* le narateur */
+   font-size:4vw;
+  font-family:'arial',italic;
+  text-align:center;
+  color:#44C1B6;
+}
+h5 { /* Description */
+  font-size:5vw;
+  font-family:New Century Schoolbook;
+  text-align:center;
+  color:white;
+}
+h6 { /* Annotation */ 
+  font-size:3vw;
+  font-family:New Century Schoolbook;
+  text-align:center;
+  color:white;
+}
+
+p{
+  font-size:5vw;
+  font-family:'arial',monospace;
+  text-align:center;
+  color:white;
+  } 
+ul{
+
+  font-family:arial;
+  color:white
+  } 
+
+  .Iconejeux {border-radius : 35% ;
+    max-width:40%;height:auto;}
+
+
+.droite {right: 30px}
+
+#menu-demo2 li:last-child li{
+background:#0A5F5F;
+font-size:3vw;
+text-align:center;
+}
+#menu-demo2, #menu-demo2 ul{
+width: 50px;
+}
+
+#menu-demo2 a{
+padding:1px 1px;
+}
+.BoutonN {
+  font-size:4vw;
+}
+.BoutonV { 
+  font-size:4vw;
+}
+
+}
+
+/* Styles pour la page de contribution */
+.author-card {
+    transition: transform 0.3s ease;
+}
+
+.author-card:hover {
+    transform: translateY(-5px);
+}
+
+.author-name {
+    font-family: 'Stencil Std', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.author-role {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Styles pour la page Intro11 */
+.dialogue-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(68, 193, 182, 0.2);
+}
+
+.narrator-text {
+    font-size: 1.8vw;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #44C1B6;
+    text-shadow: 0 0 10px rgba(68, 193, 182, 0.3);
+}
+
+.eren-text {
+    font-size: 1.8vw;
+    line-height: 1.6;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.choices-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.BoutonV {
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Animation améliorée pour les textes */
+.ap1, .ap2, .ap3, .ap4, .ap5, .ap6, .ap7, .ap8, .ap9, .ap10, .ap11, .ap12, .ap13 {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation-fill-mode: forwards;
+}
+
+@keyframes apparition {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles pour les pages de dialogue (Intro11, etc.) */
+.dialogue-background {
+    background: #000 !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    cursor: none;
+    min-height: 100vh;
+}
+
+/* Animation multicolore pour DWPLAY */
+.rainbow-letter {
+    display: inline-block;
+    background-image: linear-gradient(
+        to right,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #8b00ff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-animation 5s linear infinite;
+    animation-delay: var(--delay);
+    background-size: 400% 100%;
+    font-size: 4rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+@keyframes rainbow-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400% 0;
+    }
+}
